@@ -1,9 +1,13 @@
 import random
 import os
+import platform
 
 
 def limpa_termial() -> None:
-    os.system("cls")
+    if platform.system() == "Windows":
+        os.system("cls")
+    if platform.system() == "Linux":
+        os.system("clear")
     logo_do_jogo()
 
 
